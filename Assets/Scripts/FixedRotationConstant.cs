@@ -5,7 +5,7 @@ using UnityEngine;
 public class FixedRotationConstant : MonoBehaviour
 {
 
-    public long rotationSpeed;
+    public float rotationSpeed;
 
     // Start is called before the first frame update
     void Start()
