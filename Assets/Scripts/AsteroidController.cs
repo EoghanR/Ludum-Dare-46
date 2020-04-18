@@ -7,43 +7,33 @@ public class AsteroidController : MonoBehaviour
     public Sprite[] sprites;
     private int index;
 
-    private Vector3 euler;
+    public float maxTorque;
+    public float maxThrust;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
-    public float speed;
-
-    public int asteroidSize; // Large = 3, Medium = 2, Small = 1
+    public int asteroidSize; // Large = 2, Small = 1
     public GameObject asteroidSmall;
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        // point thrust to center of screen
+        Vector2 thrust = new Vector2(-transform.position.x * maxThrust, -transform.position.y * maxThrust);
+        float torque = Random.Range(-maxTorque, maxTorque);
+        rb.AddForce(thrust);
+        rb.AddTorque(torque);
 
         index = Random.Range(0, sprites.Length);
         GetComponent<SpriteRenderer>().sprite = sprites[index];
-
-        euler = transform.eulerAngles;
-        euler.z = Random.Range(1.0f, 3.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        RotateAsteroid();
-        MoveToCenter();
-    }
-
-    private void RotateAsteroid()
-    {
-        transform.eulerAngles += euler;
-    }
-
-    private void MoveToCenter()
-    {
-        Vector2 target = Vector2.zero; // center of the screen
-        Vector2 newPos = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
-        transform.position = newPos;
+        if (Input.GetMouseButtonDown(0))
+        {
+            Split();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -58,20 +48,8 @@ public class AsteroidController : MonoBehaviour
     {
         if (asteroidSize == 2)
         {
-            // Spawn 2 small asteroids in slightly different positions
-            float range = -0.15f;
-
-            //float distance1 = Random.Range(-range, range);
-            //float distance2 = Random.Range(-range, range);
-
-            float distance1 = range;
-            float distance2 = -range;
-
-            Vector2 newPos1 = new Vector2(transform.position.x + distance1, transform.position.y + distance1);
-            Vector2 newPos2 = new Vector2(transform.position.x + distance2, transform.position.y + distance2);
-
-            Instantiate(asteroidSmall, newPos1, transform.rotation);
-            Instantiate(asteroidSmall, newPos2, transform.rotation);
+            Instantiate(asteroidSmall, transform.position, transform.rotation);
+            Instantiate(asteroidSmall, transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }
