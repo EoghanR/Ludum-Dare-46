@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 8589945202959099089}
   - component: {fileID: 114330132338432024}
   - component: {fileID: 212082327666627604}
+  - component: {fileID: 58492589293932194}
+  - component: {fileID: 494001102}
   m_Layer: 0
-  m_Name: Asteroid
+  m_Name: Asteroid Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8589945202959099090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 755.81757, y: -314.41006, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,6 +51,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 206bd72c082b7f7499b2facff52edd4a, type: 3}
   - {fileID: 21300000, guid: 58462dcce201c384a9fe07425339eab7, type: 3}
   speed: 0.2
+  asteroidSize: 2
+  asteroidSmall: {fileID: 8589945202959099090, guid: 5203ef27616914e49a8f4e994a6ca3b7,
+    type: 3}
 --- !u!212 &212082327666627604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,3 +102,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &58492589293932194
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8589945202959099090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.01}
+  serializedVersion: 2
+  m_Radius: 0.12
+--- !u!50 &494001102
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8589945202959099090}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

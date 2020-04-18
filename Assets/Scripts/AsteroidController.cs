@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AsteroidController : MonoBehaviour
-{ 
-
+{
     public Sprite[] sprites;
-    int index;
+    private int index;
 
-    Vector3 euler;
+    private Vector3 euler;
+
+    private Rigidbody2D rb;
 
     public float speed;
 
-    // Start is called before the first frame update
+    public int asteroidSize; // Large = 3, Medium = 2, Small = 1
+    public GameObject asteroidSmall;
+
     void Start()
     {
+        rb = this.GetComponent<Rigidbody2D>();
+
         index = Random.Range(0, sprites.Length);
         GetComponent<SpriteRenderer>().sprite = sprites[index];
 
@@ -25,9 +30,13 @@ public class AsteroidController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles += euler;
-
+        RotateAsteroid();
         MoveToCenter();
+    }
+
+    private void RotateAsteroid()
+    {
+        transform.eulerAngles += euler;
     }
 
     private void MoveToCenter()
@@ -35,5 +44,35 @@ public class AsteroidController : MonoBehaviour
         Vector2 target = Vector2.zero; // center of the screen
         Vector2 newPos = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
         transform.position = newPos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("bullet"))
+        {
+            Split();
+        }
+}
+
+    private void Split()
+    {
+        if (asteroidSize == 2)
+        {
+            // Spawn 2 small asteroids in slightly different positions
+            float range = -0.15f;
+
+            //float distance1 = Random.Range(-range, range);
+            //float distance2 = Random.Range(-range, range);
+
+            float distance1 = range;
+            float distance2 = -range;
+
+            Vector2 newPos1 = new Vector2(transform.position.x + distance1, transform.position.y + distance1);
+            Vector2 newPos2 = new Vector2(transform.position.x + distance2, transform.position.y + distance2);
+
+            Instantiate(asteroidSmall, newPos1, transform.rotation);
+            Instantiate(asteroidSmall, newPos2, transform.rotation);
+        }
+        Destroy(gameObject);
     }
 }

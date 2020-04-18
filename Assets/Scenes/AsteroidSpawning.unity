@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6388597f8acd547a0953c29325549a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1.75
-  numAsteroids: 10
+  radius: 3
+  numAsteroids: 5
   asteroid: {fileID: 8589945202959099090, guid: 1f0e585f7b7aa4a4c8f2cbe0168405fc,
     type: 3}
