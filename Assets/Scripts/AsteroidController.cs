@@ -15,6 +15,8 @@ public class AsteroidController : MonoBehaviour
     public int asteroidSize; // Large = 2, Small = 1
     public GameObject asteroidSmall;
 
+    public GameObject bullet;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,9 +37,9 @@ public class AsteroidController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("bullet"))
+        if (other.gameObject.tag == "bullet")
         {
             Split();
         }

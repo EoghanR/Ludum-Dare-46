@@ -20,9 +20,8 @@ public class BulletMovement : MonoBehaviour
         }   
     }
 
-    private void OnTriggerEnter2D(Collider2D hitObject)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(hitObject.name);
         Destroy(gameObject);
     }
 }

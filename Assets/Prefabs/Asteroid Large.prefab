@@ -56,6 +56,7 @@ MonoBehaviour:
   asteroidSize: 2
   asteroidSmall: {fileID: 8589945202959099090, guid: 5203ef27616914e49a8f4e994a6ca3b7,
     type: 3}
+  bullet: {fileID: 76422516386699254, guid: ae1a3b643f07bb74a8a0d083ce7514d2, type: 3}
 --- !u!212 &212082327666627604
 SpriteRenderer:
   m_ObjectHideFlags: 0
