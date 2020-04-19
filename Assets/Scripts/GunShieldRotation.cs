@@ -5,16 +5,11 @@ using UnityEngine;
 public class GunShieldRotation : MonoBehaviour
 {
 
+    float rotationSpeed = 5f;
+
     Vector3 mousePosition;
     Vector3 objectPosition;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         mousePosition = Input.mousePosition;
@@ -24,6 +19,7 @@ public class GunShieldRotation : MonoBehaviour
         mousePosition.y -= objectPosition.y;
 
         float angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 }

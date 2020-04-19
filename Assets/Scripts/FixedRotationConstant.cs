@@ -7,13 +7,6 @@ public class FixedRotationConstant : MonoBehaviour
 
     public float rotationSpeed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // Will rotate "rotationSpeed" coords every second in the anti-clockwise direction.
