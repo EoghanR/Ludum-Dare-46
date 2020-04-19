@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointCounter : MonoBehaviour
 {
-    public static int points = 0;
+    int points = 0;
 
     public int getPoints()
     {

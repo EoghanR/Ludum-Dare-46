@@ -51,7 +51,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 206bd72c082b7f7499b2facff52edd4a, type: 3}
   - {fileID: 21300000, guid: 58462dcce201c384a9fe07425339eab7, type: 3}
   maxTorque: 25
-  maxThrust: 100
+  maxThrust: 50
   rb: {fileID: 494001102}
   asteroidSize: 2
   asteroidSmall: {fileID: 8589945202959099090, guid: 5203ef27616914e49a8f4e994a6ca3b7,

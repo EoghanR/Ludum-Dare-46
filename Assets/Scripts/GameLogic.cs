@@ -9,7 +9,7 @@ public class GameLogic : MonoBehaviour
 
     private static bool introRan = false;
 
-    enum State { Intro, Running, Dead };
+    public enum State { Intro, Running, Dead };
 
     State state;
 
@@ -73,6 +73,11 @@ public class GameLogic : MonoBehaviour
                 ReloadCurrentScene();
                 break;
         }
+    }
+
+    public void SetState(State s)
+    {
+        state = s;
     }
 
     public void DisableInstructions()
