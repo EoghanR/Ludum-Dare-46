@@ -32,7 +32,6 @@ public class AsteroidSpawner : MonoBehaviour
         } 
         if (gameLogic.getCurrentState() == GameLogic.State.Dead)
         {
-            Debug.Log("You died!");
             CancelInvoke("Spawn");
         }
     }

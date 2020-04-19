@@ -23,6 +23,8 @@ public class EarthManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "lba" || collision.gameObject.tag == "sba")
         {
+            GameObject.Find("Planet").SetActive(false);
+            GameObject.Find("Shield and gun").SetActive(false);
             Destroy(gameObject);
             gameLogicController.SetState(GameLogic.State.Dead);
         }
