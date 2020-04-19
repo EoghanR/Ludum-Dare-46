@@ -7,7 +7,9 @@ public class BulletMovement : MonoBehaviour
 
     public float speed;
     public Rigidbody2D projectile;
+
     PointCounter pointCounter;
+
     void Start()
     {
         pointCounter = GameObject.Find("World").GetComponent<PointCounter>();
