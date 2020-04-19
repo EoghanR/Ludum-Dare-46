@@ -15,7 +15,6 @@ public class PointDisplay : MonoBehaviour
         pointCounter = GameObject.Find("World").GetComponent<PointCounter>();
         pointsTotal = GameObject.Find("PointsText").GetComponent<Text>();
         highScore = GameObject.Find("HighScoreText").GetComponent<Text>();
-
     }
 
     void Update()

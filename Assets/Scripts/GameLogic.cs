@@ -9,10 +9,10 @@ public class GameLogic : MonoBehaviour
 {
     AsteroidSpawner asteroidSpawner;
 
-    public Text MainText1;
-    public Text MainText2;
-    public Text HighScoreText;
-    public Text GameOverText;
+    Text MainText1;
+    Text MainText2;
+    Text HighScoreText;
+    Text GameOverText;
 
     private static bool introRan = false;
 
@@ -27,12 +27,12 @@ public class GameLogic : MonoBehaviour
         HighScoreText = GameObject.Find("HighScoreText").GetComponent<Text>();
         GameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
 
-        HighScoreText.gameObject.SetActive(false);
+        HighScoreText.enabled = false;
         GameOverText.gameObject.SetActive(false);
 
         asteroidSpawner = GameObject.Find("World").GetComponent<AsteroidSpawner>();
         asteroidSpawner.enabled = false;
-        state = State.Intro;
+        SetState(State.Intro);
 
         if (introRan)
         {
@@ -73,7 +73,7 @@ public class GameLogic : MonoBehaviour
             case State.Intro:
                 if (introRan)
                 {
-                    state = State.Running;
+                    SetState(State.Running);
                 }
                 break;
             case State.Running:
@@ -102,7 +102,7 @@ public class GameLogic : MonoBehaviour
 
     public void ShowGameOver()
     {
-        HighScoreText.gameObject.SetActive(true);
+        HighScoreText.enabled = true;
         GameOverText.gameObject.SetActive(true);
     }
 
