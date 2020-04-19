@@ -21,14 +21,17 @@ public class AsteroidController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // point thrust to center of screen
-        Vector2 thrust = new Vector2(-transform.position.x * maxThrust, -transform.position.y * maxThrust);
         float torque = Random.Range(-maxTorque, maxTorque);
-        rb.AddForce(thrust);
         rb.AddTorque(torque);
 
         index = Random.Range(0, sprites.Length);
         GetComponent<SpriteRenderer>().sprite = sprites[index];
+    }
+
+    private void FixedUpdate()
+    {
+        // point thrust to center of screen
+        ApplyGravity();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -44,21 +47,31 @@ public class AsteroidController : MonoBehaviour
     {
         if (asteroidSize == 2)
         {
+            Vector2 direction = Vector2.zero - rb.position;
+            direction.Normalize();
+
+            Vector2 thrust = new Vector2(direction.x, direction.y);
+            Vector2 perpendicularThrust = Vector2.Perpendicular(thrust * (maxThrust));
+
             GameObject asteroidSmall1 = Instantiate(asteroidSmall, transform.position, transform.rotation);
             GameObject asteroidSmall2 = Instantiate(asteroidSmall, transform.position, transform.rotation);
 
-            float modifier = 0.25f;
-            float thrustX = Random.Range(-maxThrust * modifier, maxThrust * modifier);
-            float thrustY = Random.Range(-maxThrust * modifier, maxThrust * modifier);
-            Vector2 thrust = new Vector2(thrustX, thrustY);
-            asteroidSmall1.GetComponent<Rigidbody2D>().AddForce(thrust);
-
-            thrustX = Random.Range(-maxThrust * 0.5f, maxThrust * 0.5f);
-            thrustY = Random.Range(-maxThrust * 0.5f, maxThrust * 0.5f);
-            thrust = new Vector2(thrustX, thrustY);
-            asteroidSmall2.GetComponent<Rigidbody2D>().AddForce(thrust);
+            asteroidSmall1.GetComponent<Rigidbody2D>().AddForce(perpendicularThrust);
+            asteroidSmall2.GetComponent<Rigidbody2D>().AddForce(-perpendicularThrust);
         }
 
         Destroy(gameObject);
+    }
+
+    private void ApplyGravity()
+    {
+        Vector2 direction = Vector2.zero - rb.position;
+
+        float forceMagnitude = 200 * ((rb.mass * 10) / Mathf.Pow(direction.magnitude, 2));
+        float forceMagnitudeClamped = Mathf.Clamp(forceMagnitude, 0, 2.5f);
+        Vector2 force = forceMagnitudeClamped * direction.normalized;
+
+        rb.AddForce(force);
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, 1.0f);
     }
 }

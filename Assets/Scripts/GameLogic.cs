@@ -47,10 +47,7 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-
         CheckState();
-
-        Debug.Log(state);
 
         // replace with
         // click start button to start game
