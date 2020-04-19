@@ -7,8 +7,10 @@ public class BulletMovement : MonoBehaviour
 
     public float speed;
     public Rigidbody2D projectile;
+    PointCounter pointCounter;
     void Start()
     {
+        pointCounter = GameObject.Find("World").GetComponent<PointCounter>();
         projectile.velocity = transform.right * speed;
     }
 
@@ -23,5 +25,6 @@ public class BulletMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
+        pointCounter.increasePoints(collision.gameObject.tag);
     }
 }

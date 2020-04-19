@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - bullet
+  - lba
+  - sba
   layers:
   - Default
   - TransparentFX
