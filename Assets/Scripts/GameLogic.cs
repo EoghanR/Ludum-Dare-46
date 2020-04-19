@@ -9,6 +9,11 @@ public class GameLogic : MonoBehaviour
 {
     AsteroidSpawner asteroidSpawner;
 
+    public Text MainText1;
+    public Text MainText2;
+    public Text HighScoreText;
+    public Text GameOverText;
+
     private static bool introRan = false;
 
     public enum State { Intro, Running, Dead };
@@ -17,6 +22,14 @@ public class GameLogic : MonoBehaviour
 
     void Start()
     {
+        MainText1 = GameObject.Find("MainText1").GetComponent<Text>();
+        MainText2 = GameObject.Find("MainText2").GetComponent<Text>();
+        HighScoreText = GameObject.Find("HighScoreText").GetComponent<Text>();
+        GameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
+
+        HighScoreText.gameObject.SetActive(false);
+        GameOverText.gameObject.SetActive(false);
+
         asteroidSpawner = GameObject.Find("World").GetComponent<AsteroidSpawner>();
         asteroidSpawner.enabled = false;
         state = State.Intro;
@@ -83,14 +96,14 @@ public class GameLogic : MonoBehaviour
 
     public void DisableInstructions()
     {
-        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(3).gameObject.SetActive(false);
-        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(4).gameObject.SetActive(false);
+        MainText1.gameObject.SetActive(false);
+        MainText2.gameObject.SetActive(false);
     }
 
     public void ShowGameOver()
     {
-        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(6).gameObject.SetActive(true);
-        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(7).gameObject.SetActive(true);
+        HighScoreText.gameObject.SetActive(true);
+        GameOverText.gameObject.SetActive(true);
     }
 
     public State getCurrentState()
