@@ -50,9 +50,11 @@ public class GameLogic : MonoBehaviour
 
         CheckState();
 
+        Debug.Log(state);
+
         // replace with
         // click start button to start game
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && state != State.Dead)
         {
             SetState(State.Running);
             introRan = true;
