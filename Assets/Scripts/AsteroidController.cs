@@ -31,15 +31,9 @@ public class AsteroidController : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = sprites[index];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "bullet")
+        if (other.gameObject.tag == "bullet" || other.gameObject.tag == "shield")
         {
             Split();
             FindObjectOfType<AudioManager>().Play("AsteroidExplosion");
