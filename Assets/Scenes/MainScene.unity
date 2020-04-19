@@ -2077,12 +2077,12 @@ PrefabInstance:
     - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.255
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.31
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
@@ -2668,7 +2668,7 @@ PrefabInstance:
     - target: {fileID: 2947125850023555961, guid: a46f41e00fb2b5844b2203684d7dd461,
         type: 3}
       propertyPath: m_Volume
-      value: 0.113
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8973624117516578042, guid: a46f41e00fb2b5844b2203684d7dd461,
         type: 3}
@@ -2723,6 +2723,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045186242192, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Protect the Earth using your gun and shield!
+
+        Press spacebar/Left click to start the game.'
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045519175965, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
@@ -2913,6 +2920,13 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8221174046151151427, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Use spacebar/left click to fire your gun.
+
+        Use the arrow keys/mouse to rotate your gun/shield.'
+      objectReference: {fileID: 0}
     - target: {fileID: 8221174046647106725, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3007,15 +3021,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: TITLE
       objectReference: {fileID: 0}
+    - target: {fileID: 8753645590477108969, guid: 9b1d54d40711c20418932bada52f71c6,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753645590477108969, guid: 9b1d54d40711c20418932bada52f71c6,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1357042471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753645590477108969, guid: 9b1d54d40711c20418932bada52f71c6,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8753645590477108970, guid: 9b1d54d40711c20418932bada52f71c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.143
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8753645590477108970, guid: 9b1d54d40711c20418932bada52f71c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.127
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8753645590477108970, guid: 9b1d54d40711c20418932bada52f71c6,
         type: 3}
