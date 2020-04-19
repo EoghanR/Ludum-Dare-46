@@ -2104,6 +2104,18 @@ PrefabInstance:
       propertyPath: sounds.Array.data[2].pitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
+      propertyPath: ButtonOFF
+      value: 
+      objectReference: {fileID: 21300000, guid: 4104ee752a2d4a94488db7766c5fc407,
+        type: 3}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
+      propertyPath: ButtonON
+      value: 
+      objectReference: {fileID: 21300000, guid: af7e74575b6c0724d9430a1c6de61c1c,
+        type: 3}
     - target: {fileID: 7761187774681793582, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
       propertyPath: m_Name
@@ -2770,6 +2782,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 334334641}
+    - target: {fileID: 8221174045788595419, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: af7e74575b6c0724d9430a1c6de61c1c,
+        type: 3}
+    - target: {fileID: 8221174045788595419, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8221174045971556680, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
