@@ -2213,11 +2213,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: World
       objectReference: {fileID: 0}
-    - target: {fileID: 3108929320516034686, guid: a89ec45ac48342c4baf0afc147e8b1f8,
-        type: 3}
-      propertyPath: numAsteroids
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 3108929320516034687, guid: a89ec45ac48342c4baf0afc147e8b1f8,
         type: 3}
       propertyPath: m_LocalPosition.x

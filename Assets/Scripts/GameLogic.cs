@@ -85,4 +85,9 @@ public class GameLogic : MonoBehaviour
         GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(3).gameObject.SetActive(false);
         GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(4).gameObject.SetActive(false);
     }
+
+    public State getCurrentState()
+    {
+        return state;
+    }
 }

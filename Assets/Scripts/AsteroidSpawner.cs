@@ -5,20 +5,32 @@ using UnityEngine;
 public class AsteroidSpawner : MonoBehaviour
 {
     public float radius;
-    public int numAsteroids = 1;
+    public float spawnTime;
+    public float spawnDelay;
 
     Vector3 center;
 
+    GameLogic gameLogic = new GameLogic();
+
     public GameObject asteroid;
 
-    void Start()
+    private void Start()
     {
         center = transform.position;
-        for (int i = 0; i < numAsteroids; i++)
+
+        InvokeRepeating("Spawn", spawnTime, spawnDelay);
+    }
+
+    public void Spawn()
+    {
+        if (gameLogic.getCurrentState() != GameLogic.State.Dead)
         {
             Vector2 position = SpawnCircle(center, radius);
             Quaternion rotation = Quaternion.identity;
             Instantiate(asteroid, position, rotation);
+        } else
+        {
+            CancelInvoke("Spawn");
         }
     }
 
@@ -31,4 +43,5 @@ public class AsteroidSpawner : MonoBehaviour
         position.y = center.y + radius * Mathf.Sin(angle * Mathf.Deg2Rad);
         return position;
     }
+
 }
