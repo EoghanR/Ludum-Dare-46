@@ -10,26 +10,27 @@ public class AsteroidSpawner : MonoBehaviour
 
     Vector3 center;
 
-    GameLogic gameLogic = new GameLogic();
+    GameLogic gameLogic;
 
     public GameObject asteroid;
 
     private void Start()
     {
         center = transform.position;
+        gameLogic = GameObject.Find("World").GetComponent<GameLogic>();
 
         InvokeRepeating("Spawn", spawnTime, spawnDelay);
     }
 
     public void Spawn()
     {
-        if (gameLogic.getCurrentState() != GameLogic.State.Dead)
+        if (gameLogic.getCurrentState() == GameLogic.State.Running)
         {
             Vector2 position = SpawnCircle(center, radius);
             Quaternion rotation = Quaternion.identity;
             Instantiate(asteroid, position, rotation);
         } 
-        if (Input.GetKey("d"))
+        if (gameLogic.getCurrentState() == GameLogic.State.Dead)
         {
             Debug.Log("You died!");
             CancelInvoke("Spawn");

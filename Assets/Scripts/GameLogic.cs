@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class GameLogic : MonoBehaviour
 {
@@ -34,7 +36,7 @@ public class GameLogic : MonoBehaviour
         // click start button to start game
         if (Input.GetMouseButtonDown(0))
         {
-            state = State.Running;
+            SetState(State.Running);
             introRan = true;
         }
 
@@ -69,8 +71,7 @@ public class GameLogic : MonoBehaviour
 
                 break;
             case State.Dead:
-                // reload current scene
-                ReloadCurrentScene();
+                ShowGameOver();
                 break;
         }
     }
@@ -84,6 +85,12 @@ public class GameLogic : MonoBehaviour
     {
         GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(3).gameObject.SetActive(false);
         GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(4).gameObject.SetActive(false);
+    }
+
+    public void ShowGameOver()
+    {
+        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(6).gameObject.SetActive(true);
+        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(7).gameObject.SetActive(true);
     }
 
     public State getCurrentState()
