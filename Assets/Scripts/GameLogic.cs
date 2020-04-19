@@ -18,6 +18,11 @@ public class GameLogic : MonoBehaviour
         asteroidSpawner = GameObject.Find("World").GetComponent<AsteroidSpawner>();
         asteroidSpawner.enabled = false;
         state = State.Intro;
+
+        if (introRan)
+        {
+            DisableInstructions();
+        }
     }
 
     void Update()
@@ -59,9 +64,7 @@ public class GameLogic : MonoBehaviour
             case State.Running:
 
                 // hide instructions & start game
-                GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(3).gameObject.SetActive(false);
-                GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(4).gameObject.SetActive(false);
-
+                DisableInstructions();
                 asteroidSpawner.enabled = true;
 
                 break;
@@ -70,5 +73,11 @@ public class GameLogic : MonoBehaviour
                 ReloadCurrentScene();
                 break;
         }
+    }
+
+    public void DisableInstructions()
+    {
+        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(3).gameObject.SetActive(false);
+        GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(4).gameObject.SetActive(false);
     }
 }
