@@ -42,6 +42,7 @@ public class AsteroidController : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             Split();
+            FindObjectOfType<AudioManager>().Play("AsteroidExplosion");
         }
 }
 

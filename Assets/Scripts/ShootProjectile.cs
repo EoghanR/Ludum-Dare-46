@@ -20,5 +20,6 @@ public class ShootProjectile : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        FindObjectOfType<AudioManager>().Play("LaserShoot");
     }
 }
