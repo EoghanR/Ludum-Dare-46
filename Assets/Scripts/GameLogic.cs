@@ -14,6 +14,8 @@ public class GameLogic : MonoBehaviour
     Text HighScoreText;
     Text GameOverText;
 
+    GameObject title;
+
     private static bool introRan = false;
 
     public enum State { Intro, Running, Dead };
@@ -32,6 +34,9 @@ public class GameLogic : MonoBehaviour
 
         asteroidSpawner = GameObject.Find("World").GetComponent<AsteroidSpawner>();
         asteroidSpawner.enabled = false;
+
+        title = GameObject.Find("TITLE").gameObject;
+
         SetState(State.Intro);
 
         if (introRan)
@@ -71,6 +76,7 @@ public class GameLogic : MonoBehaviour
         switch (state)
         {
             case State.Intro:
+                title.SetActive(true);
                 if (introRan)
                 {
                     SetState(State.Running);
@@ -82,9 +88,12 @@ public class GameLogic : MonoBehaviour
                 DisableInstructions();
                 asteroidSpawner.enabled = true;
 
+                title.SetActive(false);
+
                 break;
             case State.Dead:
                 ShowGameOver();
+                title.SetActive(true);
                 break;
         }
     }
