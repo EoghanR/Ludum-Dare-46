@@ -7,7 +7,7 @@ TrueTypeFontImporter:
   forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
-  includeFontData: 1
+  includeFontData: 0
   fontName: Bandwidth 8x8
   fontNames:
   - Bandwidth 8x8

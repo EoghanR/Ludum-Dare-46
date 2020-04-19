@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3108929320516034687}
   - component: {fileID: 3108929320516034686}
   - component: {fileID: 114305680772910848}
+  - component: {fileID: 1641624285}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  numAsteroids: 10
+  numAsteroids: 20
   asteroid: {fileID: 8589945202959099090, guid: 1f0e585f7b7aa4a4c8f2cbe0168405fc,
     type: 3}
 --- !u!114 &114305680772910848
@@ -58,5 +59,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc58a79c220d4a547849e26d1c5e8452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1641624285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3108929320516034684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29798793799569b48b50fc731c3f3cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
