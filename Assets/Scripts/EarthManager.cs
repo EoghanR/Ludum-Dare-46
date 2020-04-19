@@ -25,6 +25,8 @@ public class EarthManager : MonoBehaviour
         {
             GameObject.Find("Planet").SetActive(false);
             GameObject.Find("Shield and gun").SetActive(false);
+            Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("EarthExplosion");
             gameLogicController.SetState(GameLogic.State.Dead);
         }
     }

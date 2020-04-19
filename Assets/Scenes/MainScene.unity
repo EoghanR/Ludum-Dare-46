@@ -2071,13 +2071,38 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.5
+      value: 0.255
       objectReference: {fileID: 0}
     - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.5
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: EarthExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f7bc5403c842d449a9c324208c99bf6, type: 3}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.341
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761187774681793580, guid: fda58154907d00c4d8c2d20efd735c44,
+        type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7761187774681793582, guid: fda58154907d00c4d8c2d20efd735c44,
         type: 3}
@@ -2631,7 +2656,7 @@ PrefabInstance:
     - target: {fileID: 2947125850023555961, guid: a46f41e00fb2b5844b2203684d7dd461,
         type: 3}
       propertyPath: m_Volume
-      value: 0.35
+      value: 0.113
       objectReference: {fileID: 0}
     - target: {fileID: 8973624117516578042, guid: a46f41e00fb2b5844b2203684d7dd461,
         type: 3}

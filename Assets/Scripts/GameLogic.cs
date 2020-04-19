@@ -58,6 +58,9 @@ public class GameLogic : MonoBehaviour
         {
             SetState(State.Running);
             introRan = true;
+        }else if (Input.GetKey(KeyCode.Space)){
+            SetState(State.Running);
+            introRan = true;
         }
 
         // reload scene if R button is pressed

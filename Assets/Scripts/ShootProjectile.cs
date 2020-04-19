@@ -14,6 +14,8 @@ public class ShootProjectile : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+        }else if (Input.GetKeyDown(KeyCode.Space)){
+            Shoot();
         }
     }
 
