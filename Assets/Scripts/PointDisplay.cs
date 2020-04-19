@@ -10,17 +10,24 @@ public class PointDisplay : MonoBehaviour
     Text highScore;
     PointCounter pointCounter;
 
+    GameLogic gameLogic;
+
     void Start()
     {
         pointCounter = GameObject.Find("World").GetComponent<PointCounter>();
         pointsTotal = GameObject.Find("PointsText").GetComponent<Text>();
         highScore = GameObject.Find("HighScoreText").GetComponent<Text>();
+        gameLogic = GameObject.Find("World").GetComponent<GameLogic>();
     }
 
     void Update()
     {
-        int points = pointCounter.getPoints();
-        pointsTotal.text = "Points: " + points;
-        highScore.text = "Your score was " + points;
+        
+        if (gameLogic.getCurrentState() != GameLogic.State.Dead)
+        {
+            int points = pointCounter.getPoints();
+            pointsTotal.text = "Points: " + points;
+            highScore.text = "Your score was " + points;
+        }
     }
 }
