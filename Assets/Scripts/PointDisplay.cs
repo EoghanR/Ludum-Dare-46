@@ -10,6 +10,8 @@ public class PointDisplay : MonoBehaviour
     Text highScore;
     PointCounter pointCounter;
 
+    static int highScorePoints;
+
     GameLogic gameLogic;
 
     void Start()
@@ -26,8 +28,12 @@ public class PointDisplay : MonoBehaviour
         if (gameLogic.getCurrentState() != GameLogic.State.Dead)
         {
             int points = pointCounter.getPoints();
+            if (highScorePoints <= points)
+            {
+                highScorePoints = points;
+            }
             pointsTotal.text = "Points: " + points;
-            highScore.text = "Your score was " + points;
+            highScore.text = "Your high score is " + highScorePoints;
         }
     }
 }
