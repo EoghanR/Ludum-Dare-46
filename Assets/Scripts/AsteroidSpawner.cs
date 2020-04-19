@@ -28,8 +28,10 @@ public class AsteroidSpawner : MonoBehaviour
             Vector2 position = SpawnCircle(center, radius);
             Quaternion rotation = Quaternion.identity;
             Instantiate(asteroid, position, rotation);
-        } else
+        } 
+        if (Input.GetKey("d"))
         {
+            Debug.Log("You died!");
             CancelInvoke("Spawn");
         }
     }
