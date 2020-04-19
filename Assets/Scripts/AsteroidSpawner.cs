@@ -27,8 +27,8 @@ public class AsteroidSpawner : MonoBehaviour
     {
         float angle = Random.value * 360;
         Vector2 position;
-        position.x = center.x + radius * Mathf.Sin(angle * Mathf.Deg2Rad);
-        position.y = center.y + radius * Mathf.Cos(angle * Mathf.Deg2Rad);
+        position.x = center.x + radius * Mathf.Cos(angle * Mathf.Deg2Rad);
+        position.y = center.y + radius * Mathf.Sin(angle * Mathf.Deg2Rad);
         return position;
     }
 }
