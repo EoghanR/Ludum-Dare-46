@@ -2714,32 +2714,47 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8221174045122623211, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015259
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045122623211, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 167
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045122623211, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 191.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8221174045165838123, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -635
+      value: -541
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045165838123, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 374
+      value: 317
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045186242192, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_Text
       value: 'Protect the Earth using your gun and shield!
 
-        Press spacebar/Left click to start the game.'
+        Press spacebar/left click to start the game.'
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045519175965, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -383
+      value: -326
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045519175965, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -517.08
+      value: -417.40002
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045519175965, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
@@ -2753,6 +2768,11 @@ PrefabInstance:
 
 
         Press ''R'' to Retry.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045620472177, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045620472183, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
@@ -2774,15 +2794,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Text
       objectReference: {fileID: 0}
+    - target: {fileID: 8221174045772657107, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.010000229
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045772657107, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045772657107, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.65999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045772657107, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10.93
+      objectReference: {fileID: 0}
     - target: {fileID: 8221174045788595417, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -511.40002
+      value: -417.40002
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045788595417, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 374
+      value: 317
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045788595418, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
@@ -2803,12 +2843,17 @@ PrefabInstance:
     - target: {fileID: 8221174045971556680, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 380.5
+      value: 316
       objectReference: {fileID: 0}
     - target: {fileID: 8221174045971556680, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 600
+      value: 509.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174045971556680, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.8
       objectReference: {fileID: 0}
     - target: {fileID: 8221174046145061258, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
@@ -2920,6 +2965,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8221174046151151426, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -196.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221174046151151426, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 138.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8221174046151151427, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_Text
@@ -2927,15 +2982,20 @@ PrefabInstance:
 
         Use the arrow keys/mouse to rotate your gun/shield.'
       objectReference: {fileID: 0}
+    - target: {fileID: 8221174046151151427, guid: b4f15abdbb6d2424da6c0b04135b5578,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 8221174046647106725, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 600
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 8221174046647106725, guid: b4f15abdbb6d2424da6c0b04135b5578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 380.5
+      value: 317
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8221174045143142084, guid: b4f15abdbb6d2424da6c0b04135b5578, type: 3}
