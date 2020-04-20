@@ -36,6 +36,7 @@ public class GameLogic : MonoBehaviour
         asteroidSpawner.enabled = false;
 
         title = GameObject.Find("TITLE").gameObject;
+        title.SetActive(false);
 
         SetState(State.Intro);
 
@@ -81,6 +82,7 @@ public class GameLogic : MonoBehaviour
                 title.SetActive(true);
                 if (introRan)
                 {
+                    title.SetActive(false);
                     SetState(State.Running);
                 }
                 break;
